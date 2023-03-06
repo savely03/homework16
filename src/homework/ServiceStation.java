@@ -14,5 +14,6 @@ public class ServiceStation {
 
     public void check(Vehicle vehicle) {
         vehicle.serviceVehicle();
+        System.out.println();
     }
 }
