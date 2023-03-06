@@ -1,15 +1,18 @@
 package homework;
 
+import java.util.Collection;
+
 public class ServiceStation {
-    public void check(Vehicle vehicle1, Vehicle vehicle2, Vehicle vehicle3) {
-        if (vehicle1 != null) {
-            vehicle1.serviceVehicle();
-        }
-        if (vehicle2 != null) {
-            vehicle2.serviceVehicle();
-        }
-        if (vehicle3 != null) {
-            vehicle3.serviceVehicle();
-        }
+    public void check(Collection<Vehicle> vehicles) {
+        vehicles.forEach(vehicle -> {
+            if (vehicle != null) {
+                vehicle.serviceVehicle();
+                System.out.println();
+            }
+        });
+    }
+
+    public void check(Vehicle vehicle) {
+        vehicle.serviceVehicle();
     }
 }

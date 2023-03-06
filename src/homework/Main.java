@@ -1,5 +1,7 @@
 package homework;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Домашнее задание №16");
@@ -13,18 +15,12 @@ public class Main {
         Bicycle bicycle2 = new Bicycle("bicycle2", 2);
 
         ServiceStation station = new ServiceStation();
-        station.check(car1, null, null);
-        System.out.println("-------------------------------------------");
-        station.check(car2, null, null);
-        System.out.println("-------------------------------------------");
-        station.check(null, bicycle1, null);
-        System.out.println("-------------------------------------------");
-        station.check(null, bicycle2, null);
-        System.out.println("-------------------------------------------");
-        station.check(null, null, truck1);
-        System.out.println("-------------------------------------------");
-        station.check(null, null, truck2);
-        System.out.println("-------------------------------------------");
-        station.check(null, null, null);
+        station.check(Arrays.asList(car1, car2, truck1, truck2, bicycle1, bicycle2));
+//        station.check(car1);
+//        station.check(car2);
+//        station.check(truck1);
+//        station.check(truck2);
+//        station.check(bicycle1);
+//        station.check(bicycle2);
     }
 }
